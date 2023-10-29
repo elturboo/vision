@@ -1,0 +1,440 @@
+/* [Master Stylesheet] */
+
+/* ----------------------------------------------------------
+    :: Template 
+    :: Author: Turbo
+    :: Author URL:www.boo-code.com 
+    :: Version: 1.0
+    :: Created: 10 2023
+    :: Last Updated: 10 2023
+    ---------------------------------------------------------- */
+
+/* -------------------------------------------------
+    ============ PLACE YOUR CUSTOM CSS HERE ============
+    ------------------------------------------------- */
+
+@font-face {
+  font-family: '29ltbukrabold';
+  src: url('../fonts/29ltbukrabold.otf');
+}
+
+@font-face {
+  font-family: '29ltbukralight';
+  src: url('../fonts/29ltbukralight.otf');
+}
+
+@font-face {
+  font-family: '29ltbukraregular';
+  src: url('../fonts/29ltbukraregular.otf');
+}
+
+
+$mainColor: #63C525;
+$secondColor: #73BE44;
+$textColor: #4D4D4D;
+
+// start global
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: '29ltbukraregular', sans-serif;
+  font-size: 16px;
+  color: $textColor;
+  line-height: 1.6;
+  background: #fff;
+  overflow-x: hidden;
+  height: 5000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: '29ltbukrabold', sans-serif;
+  line-height: 1.8;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: $textColor;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.section_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: $textColor;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+
+  &.main {
+    color: $mainColor;
+    font-size: 64px;
+  }
+}
+
+.section_padding {
+  padding: 80px 0;
+}
+
+.mainBtn {
+  background: $mainColor;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 50px;
+  border-radius: 15px;
+  border: 2px solid $mainColor;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: transparent;
+    color: $mainColor;
+  }
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  padding: 15px 50px;
+  font-size: 18px;
+  border-radius: 35px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #fff;
+    color: $mainColor;
+  }
+}
+
+// start hero
+.navbar {
+  border-radius: 100px;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 40px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline-end: 20px;
+  padding-inline-start: 30px;
+
+  .navbar-brand {
+    img {
+      height: 60px;
+    }
+  }
+
+  .special_nav_link {
+    background: $mainColor;
+    border-radius: 25px;
+    color: #fff;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    margin-inline-start: 10px;
+  }
+
+  .nav-link.dropdown-toggle {
+    img {
+      margin-top: -4px;
+    }
+  }
+}
+
+.slider {
+  .carousel-item {
+    padding-top: 80px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .caption_box {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      color: $mainColor;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: #fff;
+      width: 55%;
+      margin-bottom: 50px;
+    }
+
+  }
+}
+
+// end hero
+
+// start about 
+.about {
+  padding: 100px 0;
+  background: url('../images/about_bg.png') no-repeat center center;
+  background-size: cover;
+
+  img {
+    height: 370px;
+    display: block;
+    margin-inline-start: auto;
+  }
+
+  h2 {
+    color: $mainColor;
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+}
+
+// end about
+
+// start services
+.services {
+  padding: 100px 0;
+  background: url('../images/services_bg.png') no-repeat top center;
+  background-size: cover;
+  padding-top: 200px;
+
+  .serv_box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/serv_box_bg.png');
+    background-size: 160px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+
+    img {
+      height: 60px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    h4 {
+      font-size: 24px;
+      margin-top: 15px;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+}
+
+// end services
+
+// start partenrs
+.partenrs {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../images/partenrs_bg.png') no-repeat center center;
+  background-size: cover;
+
+  .slider_box {
+    background: #fff;
+    padding: 50px;
+    box-shadow: 0px 3px 17px #00000029;
+    border-radius: 33px;
+    position: relative;
+
+    .owl-carousel {
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          height: 100px;
+          object-fit: contain;
+          margin: 0 20px;
+        }
+      }
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+      position: absolute;
+      top: 30%;
+      font-size: 30px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: $mainColor;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+      left: -30px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev {
+      right: -30px;
+    }
+
+  }
+}
+
+// end partners
+
+
+// start banner
+.banner {
+  padding: 80px;
+  background: url('../images/banner_bg.png') no-repeat center center;
+  background-size: cover;
+
+  h5 {
+    color: #fff;
+    margin-bottom: 30px;
+    width: 70%;
+    line-height: 2;
+    font-size: 18px;
+  }
+
+}
+
+// end banner
+
+// start testimonials
+.testimonials {
+  padding: 100px 0;
+  background: url('../images/testimonials_bg.svg') no-repeat center center;
+  background-size: cover;
+
+  h2 {
+    text-align: center;
+    color: $secondColor;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  p.description {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .test_box {
+    padding: 30px;
+    background: #fff;
+    box-shadow: -10px 10px 0px 0px $secondColor;
+    border-radius: 33px;
+    display: flex;
+    gap: 20px;
+
+    img {
+      height: 80px;
+      border-radius: 50%;
+      object-fit: contain;
+      margin-bottom: 10px;
+      width: unset;
+    }
+
+    .desc {
+
+      h5 {
+        font-size: 18px;
+        color: #41494B;
+        margin-bottom: 0px;
+
+      }
+
+      p {
+        font-size: 14px;
+        color: #82999F;
+        text-align: start;
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  .owl-stage-outer {
+    width: 102%;
+  }
+
+  .owl-stage {
+
+    padding-bottom: 30px;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 22px;
+    height: 7px;
+    margin: 2px 4px;
+    background: #6d838a7c;
+    display: block;
+    border-radius: 25px;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span {
+    background: $secondColor;
+    width: 38px;
+  }
+
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #4a8129;
+
+  }
+}
+
+// end testimonials
+
+/* Responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* galaxy S5 */
+@media only screen and (min-width: 359px) and (max-width: 361px) {}
+
+/* iphone x, 6/7/8 */
+@media only screen and (min-width: 375px) and (max-width: 380px) {}
+
+/* iphone 6/7/8 plus */
+@media only screen and (min-width: 410px) and (max-width: 416px) {}
+
+/* ipad */
+@media only screen and (min-width: 768px) and (max-width: 992px) {}
+
+/* ipad pro  */
+@media only screen and (min-width: 1024px) and (max-width: 1030px) {}
+
+/* 17 inch */
+@media only screen and (min-width: 1920px) and (max-width: 2500px) {}
